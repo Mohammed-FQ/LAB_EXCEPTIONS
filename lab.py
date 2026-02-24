@@ -22,5 +22,19 @@ def additoin(x, y):
     y = 20
     print("Addition:", x + b)
 
+print("--Finding out what exception is raised")
+try:
+    additoin(10, 20)
+except Exception as e:
+    print(f"An exception occurred: {type(e).__name__} – {e}")
 
-additoin(10, 20)
+print()
+print("--Handeling exception")
+try:
+    additoin(10, 20)
+except NameError:
+    print("Name error -- Undefined name")
+except Exception as e:
+    print(f"An exception occurred: {type(e).__name__} – {e}")  
+else:
+    print("the operation is successful")
